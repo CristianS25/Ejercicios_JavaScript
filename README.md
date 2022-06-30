@@ -1,1 +1,3 @@
-# Ejercicios_JavaScript
+# Ejercicios JavaScript
+# Cristian Quevedo
+
