@@ -1,5 +1,23 @@
+//funcion para validar el nombre del vendedor y de los productos
+function validaNom(texto){
+    do {
+    let nombre = prompt(texto);
+
+    if (nombre !== "" && !(!/^[a-z A-Z]*$/g.test(nombre)))
+      return nombre;
+    } while (true);
+  }
+//funcion para validar los numeros (cantidad)
+function validaNum(texto){
+    do {
+    let nombre = prompt(texto);
+
+    if (nombre !== "" && !(!/^[0-9]*$/g.test(nombre)))
+      return nombre;
+    } while (true);
+  }
 //solicitamos el nombre del usuario y lo almacenamos en una variable
-let usuario = prompt("¿Cuál es tu nombre?");
+let usuario = validaNom("¿Cuál es tu nombre?");
 
 //almacenamos el código del producto y el precio en la variable productos
 let productos = {
@@ -24,7 +42,7 @@ do{
   //definimos un do while para realizar el proceso al menos una sola vez
   do{
     //le solicitamos al usuario insertar el código del producto que desea comprar
-    cod = prompt(usuario+" inserta el código del producto que desees comprar");
+    cod = validaNom(usuario+" inserta el código del producto que desees comprar");
     //Ponemos el string en mayúsculas con la funcion toUpperCase
     cod = cod.toUpperCase(); 
     
@@ -32,7 +50,7 @@ do{
   switch (cod) {
     //en caso que el usuario digite el código C, se ralizará el siguiente proceso  
     case 'C':
-        cant = prompt("Digita la cantidad que desea llevar");
+        cant = validaNum("Digita la cantidad que desea llevar");
 
       total = productos.C * cant;
       alert("El precio total a pagar es: "+total+" pesos");
@@ -40,7 +58,7 @@ do{
     
     //en caso que el usuario digite el código P, se ralizará el siguiente proceso  
     case 'P':
-        cant = prompt("Digita la cantidad que desea llevar");
+        cant = validaNum("Digita la cantidad que desea llevar");
 
       total = productos.P * cant;
       alert("El precio total a pagar es: "+total+" pesos");
@@ -48,7 +66,7 @@ do{
       
     //en caso que el usuario digite el código M, se ralizará el siguiente proceso 
     case 'M':
-        cant = prompt("Digita la cantidad que desea llevar");
+        cant = validaNum("Digita la cantidad que desea llevar");
       total = productos.M * cant;
       alert("El precio total a pagar es: "+total+" pesos");
       break;
