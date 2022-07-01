@@ -236,7 +236,6 @@ let nombre="";
 nombre = capturaNombre("Nombre del vendedor"); 
 //funcion Para capturar el nombre del vendedor
 
-let sw = true;
 
 //capturamos el nombre del vendedor
 function capturaNombre(){
@@ -245,7 +244,7 @@ function capturaNombre(){
       let nombre = prompt('Digite su nombre =>');
     if (nombre !== "" && !(!/^[a-zA-Z ]*$/g.test(nombre)))
       return nombre;
-    }while(sw)
+    }while(true)
  };
 
 let arreglo = new productosEnVenta;
