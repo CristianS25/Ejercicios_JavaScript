@@ -61,6 +61,6 @@ do{
   }
   } 
   while(cant === false);
-
+  valid = confirm("¿Desea comprar otro producto?");
 }
-while("¿Desea comprar otro producto?");
+while(valid === true);
